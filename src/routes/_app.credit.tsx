@@ -35,37 +35,52 @@ function ScoreGauge({ score }: { score: number }) {
   const min = 550;
   const max = 850;
   const pct = Math.min(100, Math.max(0, ((score - min) / (max - min)) * 100));
-  const angle = -90 + (pct / 100) * 180;
+  const angle = -180 + (pct / 100) * 180;
   return (
     <div className="relative w-full max-w-xs mx-auto">
-      <svg viewBox="0 0 200 120" className="w-full">
+      <svg viewBox="0 0 200 125" className="w-full">
+        <defs>
+          <linearGradient id="score-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ef4444" />
+            <stop offset="50%" stop-color="#eab308" />
+            <stop offset="100%" stop-color="#10b981" />
+          </linearGradient>
+        </defs>
+        {/* Background Arc */}
         <path
           d="M 20 110 A 80 80 0 0 1 180 110"
           fill="none"
-          stroke="#e5e5e5"
-          strokeWidth="14"
+          stroke="#f3f4f6"
+          strokeWidth="12"
           strokeLinecap="round"
         />
+        {/* Active Arc */}
         <path
           d="M 20 110 A 80 80 0 0 1 180 110"
           fill="none"
-          stroke="#000"
-          strokeWidth="14"
+          stroke="url(#score-grad)"
+          strokeWidth="12"
           strokeLinecap="round"
-          strokeDasharray={`${(pct / 100) * 251} 251`}
+          strokeDasharray={`${(pct / 100) * 251.3} 251.3`}
+          className="transition-all duration-1000 ease-out"
         />
+        {/* Needle */}
         <line
           x1="100"
           y1="110"
-          x2={100 + 70 * Math.cos((angle * Math.PI) / 180)}
-          y2={110 + 70 * Math.sin((angle * Math.PI) / 180)}
-          stroke="#000"
-          strokeWidth="2"
+          x2={100 + 72 * Math.cos((angle * Math.PI) / 180)}
+          y2={110 + 72 * Math.sin((angle * Math.PI) / 180)}
+          stroke="#1f2937"
+          strokeWidth="3.5"
+          strokeLinecap="round"
+          className="transition-all duration-1000 ease-out"
         />
-        <circle cx="100" cy="110" r="4" fill="#000" />
+        {/* Center Pin */}
+        <circle cx="100" cy="110" r="6" fill="#111827" />
+        <circle cx="100" cy="110" r="2.5" fill="#ffffff" />
       </svg>
       <div className="text-center -mt-2">
-        <div className="text-5xl font-semibold">{score}</div>
+        <div className="text-5xl font-bold tracking-tight text-neutral-900">{score}</div>
       </div>
     </div>
   );

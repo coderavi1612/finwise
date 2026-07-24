@@ -65,14 +65,14 @@ function ImprovePage() {
                   </div>
                   <button
                     onClick={() => setToggles((t) => ({ ...t, [r.key]: !t[r.key] }))}
-                    className={`h-6 w-11 rounded-full border transition-colors ${
-                      on ? "bg-black border-black" : "bg-white border-neutral-300"
+                    className={`h-6 w-11 rounded-full transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-950 focus-visible:ring-offset-2 ${
+                      on ? "bg-emerald-600" : "bg-neutral-200"
                     } relative`}
                     aria-pressed={on}
                   >
                     <span
-                      className={`absolute top-0.5 h-5 w-5 rounded-full bg-white border border-neutral-300 transition-all ${
-                        on ? "left-5 border-black" : "left-0.5"
+                      className={`absolute top-0.5 left-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform duration-200 ${
+                        on ? "translate-x-5" : "translate-x-0"
                       }`}
                     />
                   </button>
