@@ -7,10 +7,9 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
@@ -37,9 +36,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -78,24 +74,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "FinWise AI — Transparent Credit & Investment Insights" },
-      { name: "description", content: "FinWise AI helps underserved users understand their financial health, credit score, and investment readiness with transparent AI insights." },
-      { name: "author", content: "Lovable" },
+      {
+        name: "description",
+        content:
+          "FinWise AI helps underserved users understand their financial health, credit score, and investment readiness with transparent AI insights.",
+      },
+      { name: "author", content: "FinWise AI" },
       { property: "og:title", content: "FinWise AI — Transparent Credit & Investment Insights" },
-      { property: "og:description", content: "FinWise AI helps underserved users understand their financial health, credit score, and investment readiness with transparent AI insights." },
+      {
+        property: "og:description",
+        content:
+          "FinWise AI helps underserved users understand their financial health, credit score, and investment readiness with transparent AI insights.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "FinWise AI — Transparent Credit & Investment Insights" },
-      { name: "twitter:description", content: "FinWise AI helps underserved users understand their financial health, credit score, and investment readiness with transparent AI insights." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5175497-f167-4359-bd97-3e46c004a61b/id-preview-19a48071--b2b7c75f-80bb-4721-8066-de7de922f73d.lovable.app-1784703093572.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f5175497-f167-4359-bd97-3e46c004a61b/id-preview-19a48071--b2b7c75f-80bb-4721-8066-de7de922f73d.lovable.app-1784703093572.png" },
+      {
+        name: "twitter:description",
+        content:
+          "FinWise AI helps underserved users understand their financial health, credit score, and investment readiness with transparent AI insights.",
+      },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
     ],
   }),
   shellComponent: RootShell,

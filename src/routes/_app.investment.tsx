@@ -1,14 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader, Card, RiskBadge } from "@/components/AppLayout";
 import { useSelectedUser } from "@/store/app-store";
-import {
-  PieChart,
-  Pie,
-  Cell,
-  ResponsiveContainer,
-  Tooltip,
-  Legend,
-} from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from "recharts";
 
 export const Route = createFileRoute("/_app/investment")({
   head: () => ({
@@ -16,8 +9,7 @@ export const Route = createFileRoute("/_app/investment")({
       { title: "Investment Recommendation — FinWise AI" },
       {
         name: "description",
-        content:
-          "Category-level investment allocation recommended for your risk profile.",
+        content: "Category-level investment allocation recommended for your risk profile.",
       },
       { property: "og:title", content: "Investment Recommendation — FinWise AI" },
       {
@@ -93,9 +85,9 @@ function InvestmentPage() {
       </Card>
 
       <div className="mt-6 rounded-2xl border border-yellow-200 bg-yellow-50 p-4 text-xs text-yellow-800">
-        This recommendation is for educational purposes only and does not
-        constitute regulated financial advice. FinWise AI never recommends
-        individual stocks — only diversified investment categories.
+        This recommendation is for educational purposes only and does not constitute regulated
+        financial advice. FinWise AI never recommends individual stocks — only diversified
+        investment categories.
       </div>
 
       <div className="mt-6">

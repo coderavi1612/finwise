@@ -30,10 +30,7 @@ function Landing() {
         <div className="font-semibold tracking-tight">
           FinWise <span className="text-neutral-400">AI</span>
         </div>
-        <Link
-          to="/demo"
-          className="text-sm text-neutral-600 hover:text-black transition-colors"
-        >
+        <Link to="/demo" className="text-sm text-neutral-600 hover:text-black transition-colors">
           Try demo →
         </Link>
       </header>
@@ -46,9 +43,8 @@ function Landing() {
           FinWise AI
         </h1>
         <p className="mt-5 text-base md:text-lg text-neutral-500 max-w-2xl mx-auto">
-          Helping underserved users understand their financial health and
-          investment readiness. Transparent credit insights and AI-powered
-          micro investment guidance.
+          Helping underserved users understand their financial health and investment readiness.
+          Transparent credit insights and AI-powered micro investment guidance.
         </p>
 
         <div className="mt-8 flex items-center justify-center gap-3">
@@ -78,10 +74,7 @@ function Landing() {
               desc: "Project how small, steady contributions grow across conservative to optimistic scenarios.",
             },
           ].map((f) => (
-            <div
-              key={f.title}
-              className="rounded-2xl border border-neutral-200 p-5"
-            >
+            <div key={f.title} className="rounded-2xl border border-neutral-200 p-5">
               <f.icon className="h-5 w-5 text-neutral-700" />
               <div className="mt-3 font-medium">{f.title}</div>
               <div className="mt-1 text-sm text-neutral-500">{f.desc}</div>

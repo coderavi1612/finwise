@@ -36,8 +36,7 @@ function ProfilePage() {
     value: form[key] as string | number,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
       const v = e.target.value;
-      const num =
-        typeof user[key] === "number" ? Number(v.replace(/[^0-9]/g, "")) || 0 : v;
+      const num = typeof user[key] === "number" ? Number(v.replace(/[^0-9]/g, "")) || 0 : v;
       setForm((f) => ({ ...f, [key]: num }) as typeof form);
       setSaved(false);
     },
@@ -79,10 +78,7 @@ function ProfilePage() {
             <Field label="Utility payments" {...bind("utilityPayments")} />
             <Field label="Shopping frequency" {...bind("shoppingFrequency")} />
             <Field label="UPI usage" {...bind("upiUsage")} />
-            <Field
-              label="Existing investments"
-              {...bind("existingInvestments")}
-            />
+            <Field label="Existing investments" {...bind("existingInvestments")} />
           </div>
         </Card>
 

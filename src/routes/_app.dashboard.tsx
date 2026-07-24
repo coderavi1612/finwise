@@ -25,10 +25,7 @@ export const Route = createFileRoute("/_app/dashboard")({
 function Dashboard() {
   const user = useSelectedUser()!;
   const capacity = Math.max(500, Math.round((user.income - user.expenses) * 0.4));
-  const health = Math.min(
-    100,
-    Math.round(((user.creditScore - 550) / 300) * 100),
-  );
+  const health = Math.min(100, Math.round(((user.creditScore - 550) / 300) * 100));
 
   return (
     <div>
@@ -43,11 +40,7 @@ function Dashboard() {
           value={`${health}/100`}
           hint="Composite of behaviour signals"
         />
-        <StatCard
-          label="Credit Score"
-          value={user.creditScore}
-          hint={user.creditLabel}
-        />
+        <StatCard label="Credit Score" value={user.creditScore} hint={user.creditLabel} />
         <StatCard label="Risk Level" value={<RiskBadge risk={user.risk} />} />
         <StatCard
           label="Investment Capacity"
@@ -74,11 +67,7 @@ function Dashboard() {
           title="Credit Score"
           desc={`${user.creditScore} · ${user.creditLabel}`}
         />
-        <QuickLink
-          to="/risk"
-          title="Risk Profile"
-          desc={`${user.risk} risk tolerance`}
-        />
+        <QuickLink to="/risk" title="Risk Profile" desc={`${user.risk} risk tolerance`} />
         <QuickLink
           to="/investment"
           title="Suggested Investment"

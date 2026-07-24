@@ -97,9 +97,7 @@ function GrowthPage() {
             </div>
           </div>
           <div>
-            <label className="text-xs uppercase tracking-wide text-neutral-500">
-              Duration
-            </label>
+            <label className="text-xs uppercase tracking-wide text-neutral-500">Duration</label>
             <div className="mt-3 flex gap-2">
               {[1, 3, 5].map((y) => (
                 <button
@@ -128,9 +126,7 @@ function GrowthPage() {
                 fontSize={11}
                 tickFormatter={(v) => `₹${(v / 1000).toFixed(0)}k`}
               />
-              <Tooltip
-                formatter={(v: number) => `₹${v.toLocaleString("en-IN")}`}
-              />
+              <Tooltip formatter={(v: number) => `₹${v.toLocaleString("en-IN")}`} />
               <Legend />
               <Line
                 type="monotone"
@@ -139,13 +135,7 @@ function GrowthPage() {
                 strokeWidth={2}
                 dot={false}
               />
-              <Line
-                type="monotone"
-                dataKey="Expected"
-                stroke="#000"
-                strokeWidth={2}
-                dot={false}
-              />
+              <Line type="monotone" dataKey="Expected" stroke="#000" strokeWidth={2} dot={false} />
               <Line
                 type="monotone"
                 dataKey="Optimistic"
@@ -168,9 +158,7 @@ function GrowthPage() {
         </Card>
         <Card>
           <div className="text-xs uppercase text-neutral-500">Expected</div>
-          <div className="text-2xl font-semibold mt-2">
-            ₹{maturity.exp.toLocaleString("en-IN")}
-          </div>
+          <div className="text-2xl font-semibold mt-2">₹{maturity.exp.toLocaleString("en-IN")}</div>
           <div className="text-xs text-neutral-500 mt-1">at 10% p.a.</div>
         </Card>
         <Card>

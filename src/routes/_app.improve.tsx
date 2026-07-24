@@ -10,8 +10,7 @@ export const Route = createFileRoute("/_app/improve")({
       { title: "Improve Your Credit — FinWise AI" },
       {
         name: "description",
-        content:
-          "Actionable recommendations and a what-if simulator to boost your credit profile.",
+        content: "Actionable recommendations and a what-if simulator to boost your credit profile.",
       },
       { property: "og:title", content: "Improve Your Credit — FinWise AI" },
       {
@@ -35,10 +34,7 @@ function ImprovePage() {
   const [toggles, setToggles] = useState<Record<string, boolean>>({});
 
   const projected = useMemo(() => {
-    const boost = recommendations.reduce(
-      (sum, r) => (toggles[r.key] ? sum + r.impact : sum),
-      0,
-    );
+    const boost = recommendations.reduce((sum, r) => (toggles[r.key] ? sum + r.impact : sum), 0);
     return Math.min(850, user.creditScore + boost);
   }, [toggles, user.creditScore]);
 
@@ -64,19 +60,13 @@ function ImprovePage() {
                     <div className="text-sm font-medium">{r.title}</div>
                     <div className="text-xs text-neutral-500 mt-0.5">
                       Estimated impact:{" "}
-                      <span className="text-green-700 font-medium">
-                        +{r.impact} points
-                      </span>
+                      <span className="text-green-700 font-medium">+{r.impact} points</span>
                     </div>
                   </div>
                   <button
-                    onClick={() =>
-                      setToggles((t) => ({ ...t, [r.key]: !t[r.key] }))
-                    }
+                    onClick={() => setToggles((t) => ({ ...t, [r.key]: !t[r.key] }))}
                     className={`h-6 w-11 rounded-full border transition-colors ${
-                      on
-                        ? "bg-black border-black"
-                        : "bg-white border-neutral-300"
+                      on ? "bg-black border-black" : "bg-white border-neutral-300"
                     } relative`}
                     aria-pressed={on}
                   >
@@ -98,18 +88,13 @@ function ImprovePage() {
           </div>
           <div className="mt-3 flex items-baseline gap-2">
             <div className="text-4xl font-semibold">{projected}</div>
-            <div className="text-sm text-green-700">
-              +{projected - user.creditScore}
-            </div>
+            <div className="text-sm text-green-700">+{projected - user.creditScore}</div>
           </div>
-          <div className="text-xs text-neutral-500 mt-1">
-            Current: {user.creditScore}
-          </div>
+          <div className="text-xs text-neutral-500 mt-1">Current: {user.creditScore}</div>
 
           <div className="mt-6 rounded-xl bg-neutral-50 p-3 text-xs text-neutral-600 flex gap-2">
             <TrendingUp className="h-4 w-4 mt-0.5" />
-            Toggle actions to see how consistent behaviour changes your score
-            over the next quarter.
+            Toggle actions to see how consistent behaviour changes your score over the next quarter.
           </div>
         </Card>
       </div>

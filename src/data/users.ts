@@ -56,11 +56,7 @@ export const demoUsers: DemoUser[] = [
       "High digital payment adoption",
       "Low overall expenses",
     ],
-    negatives: [
-      "No investment history",
-      "Irregular utility contributions",
-      "Thin credit file",
-    ],
+    negatives: ["No investment history", "Irregular utility contributions", "Thin credit file"],
     allocation: [
       { name: "Index Fund", value: 30 },
       { name: "Hybrid Fund", value: 20 },
@@ -102,11 +98,7 @@ export const demoUsers: DemoUser[] = [
       "Diversified digital footprint",
       "Existing SIP discipline",
     ],
-    negatives: [
-      "Irregular monthly income",
-      "Medium shopping frequency",
-      "No long-term deposits",
-    ],
+    negatives: ["Irregular monthly income", "Medium shopping frequency", "No long-term deposits"],
     allocation: [
       { name: "Index Fund", value: 40 },
       { name: "Hybrid Fund", value: 30 },
@@ -143,16 +135,8 @@ export const demoUsers: DemoUser[] = [
     previousScore: 772,
     estimatedNextScore: 795,
     risk: "Low",
-    positives: [
-      "Utility bills always on time",
-      "Stable monthly income",
-      "Healthy savings",
-    ],
-    negatives: [
-      "High shopping frequency",
-      "Low equity exposure",
-      "Concentrated in EPF",
-    ],
+    positives: ["Utility bills always on time", "Stable monthly income", "Healthy savings"],
+    negatives: ["High shopping frequency", "Low equity exposure", "Concentrated in EPF"],
     allocation: [
       { name: "Index Fund", value: 50 },
       { name: "Hybrid Fund", value: 25 },
@@ -189,16 +173,8 @@ export const demoUsers: DemoUser[] = [
     previousScore: 698,
     estimatedNextScore: 725,
     risk: "Medium",
-    positives: [
-      "Steady business cash flow",
-      "Low personal expenses",
-      "Existing gold reserves",
-    ],
-    negatives: [
-      "Seasonal revenue swings",
-      "No formal credit history",
-      "Low equity exposure",
-    ],
+    positives: ["Steady business cash flow", "Low personal expenses", "Existing gold reserves"],
+    negatives: ["Seasonal revenue swings", "No formal credit history", "Low equity exposure"],
     allocation: [
       { name: "Index Fund", value: 30 },
       { name: "Hybrid Fund", value: 35 },
@@ -240,11 +216,7 @@ export const demoUsers: DemoUser[] = [
       "Disciplined household savings",
       "Low expense ratio",
     ],
-    negatives: [
-      "No formal credit history",
-      "Limited income",
-      "Informal investments only",
-    ],
+    negatives: ["No formal credit history", "Limited income", "Informal investments only"],
     allocation: [
       { name: "Index Fund", value: 25 },
       { name: "Hybrid Fund", value: 25 },
@@ -281,16 +253,8 @@ export const demoUsers: DemoUser[] = [
     previousScore: 602,
     estimatedNextScore: 630,
     risk: "High",
-    positives: [
-      "Steady gig income",
-      "High UPI activity",
-      "Low fixed obligations",
-    ],
-    negatives: [
-      "Occasional bill delays",
-      "High impulsive shopping",
-      "No savings buffer",
-    ],
+    positives: ["Steady gig income", "High UPI activity", "Low fixed obligations"],
+    negatives: ["Occasional bill delays", "High impulsive shopping", "No savings buffer"],
     allocation: [
       { name: "Index Fund", value: 20 },
       { name: "Hybrid Fund", value: 20 },
@@ -332,11 +296,7 @@ export const demoUsers: DemoUser[] = [
       "Traditional investment discipline",
       "Stable pension-linked job",
     ],
-    negatives: [
-      "Low equity exposure",
-      "Limited digital footprint",
-      "Concentration in insurance",
-    ],
+    negatives: ["Low equity exposure", "Limited digital footprint", "Concentration in insurance"],
     allocation: [
       { name: "Index Fund", value: 40 },
       { name: "Hybrid Fund", value: 30 },
@@ -373,11 +333,7 @@ export const demoUsers: DemoUser[] = [
     previousScore: 795,
     estimatedNextScore: 812,
     risk: "Medium",
-    positives: [
-      "Strong cash flow",
-      "Existing diversified portfolio",
-      "High digital adoption",
-    ],
+    positives: ["Strong cash flow", "Existing diversified portfolio", "High digital adoption"],
     negatives: [
       "High discretionary spend",
       "Business income volatility",
@@ -419,16 +375,8 @@ export const demoUsers: DemoUser[] = [
     previousScore: 710,
     estimatedNextScore: 738,
     risk: "Low",
-    positives: [
-      "Consistent salary",
-      "Low shopping frequency",
-      "Regular savings habit",
-    ],
-    negatives: [
-      "No equity exposure",
-      "Thin credit history",
-      "Concentration in RD",
-    ],
+    positives: ["Consistent salary", "Low shopping frequency", "Regular savings habit"],
+    negatives: ["No equity exposure", "Thin credit history", "Concentration in RD"],
     allocation: [
       { name: "Index Fund", value: 35 },
       { name: "Hybrid Fund", value: 30 },
@@ -465,16 +413,8 @@ export const demoUsers: DemoUser[] = [
     previousScore: 732,
     estimatedNextScore: 762,
     risk: "High",
-    positives: [
-      "Stable tech salary",
-      "Active SIP contributions",
-      "Excellent digital footprint",
-    ],
-    negatives: [
-      "High shopping frequency",
-      "Short credit history",
-      "High-risk appetite unchecked",
-    ],
+    positives: ["Stable tech salary", "Active SIP contributions", "Excellent digital footprint"],
+    negatives: ["High shopping frequency", "Short credit history", "High-risk appetite unchecked"],
     allocation: [
       { name: "Index Fund", value: 55 },
       { name: "Hybrid Fund", value: 20 },

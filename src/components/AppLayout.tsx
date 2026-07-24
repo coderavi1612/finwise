@@ -78,9 +78,7 @@ export function AppLayout({ children }: { children: ReactNode }) {
           })}
         </nav>
         <div className="p-3 border-t border-neutral-200">
-          <label className="block text-xs text-neutral-500 mb-1 px-1">
-            Demo user
-          </label>
+          <label className="block text-xs text-neutral-500 mb-1 px-1">Demo user</label>
           <select
             value={user.id}
             onChange={(e) => selectUser(e.target.value)}
@@ -158,27 +156,15 @@ export function PageHeader({
           <ArrowLeft className="h-3 w-3" /> Back
         </Link>
       )}
-      <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">
-        {title}
-      </h1>
-      {description && (
-        <p className="mt-2 text-sm text-neutral-500 max-w-2xl">{description}</p>
-      )}
+      <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">{title}</h1>
+      {description && <p className="mt-2 text-sm text-neutral-500 max-w-2xl">{description}</p>}
     </div>
   );
 }
 
-export function Card({
-  children,
-  className = "",
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
+export function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <div
-      className={`rounded-2xl border border-neutral-200 bg-white p-5 ${className}`}
-    >
+    <div className={`rounded-2xl border border-neutral-200 bg-white p-5 ${className}`}>
       {children}
     </div>
   );
@@ -195,9 +181,7 @@ export function StatCard({
 }) {
   return (
     <Card>
-      <div className="text-xs uppercase tracking-wide text-neutral-500">
-        {label}
-      </div>
+      <div className="text-xs uppercase tracking-wide text-neutral-500">{label}</div>
       <div className="mt-2 text-2xl font-semibold">{value}</div>
       {hint && <div className="mt-1 text-xs text-neutral-500">{hint}</div>}
     </Card>

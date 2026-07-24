@@ -10,8 +10,7 @@ export const Route = createFileRoute("/_app/risk")({
       { title: "Risk Assessment — FinWise AI" },
       {
         name: "description",
-        content:
-          "A short conversational assessment to categorise your investment risk tolerance.",
+        content: "A short conversational assessment to categorise your investment risk tolerance.",
       },
       { property: "og:title", content: "Risk Assessment — FinWise AI" },
       {
@@ -112,9 +111,7 @@ const questions: Q[] = [
   },
 ];
 
-type Turn =
-  | { role: "bot"; text: string }
-  | { role: "user"; text: string; score: number };
+type Turn = { role: "bot"; text: string } | { role: "user"; text: string; score: number };
 
 function RiskPage() {
   const user = useSelectedUser()!;
@@ -178,15 +175,10 @@ function RiskPage() {
       <Card>
         <div className="space-y-3 max-h-[420px] overflow-y-auto pr-1">
           {turns.map((t, i) => (
-            <div
-              key={i}
-              className={`flex ${t.role === "user" ? "justify-end" : "justify-start"}`}
-            >
+            <div key={i} className={`flex ${t.role === "user" ? "justify-end" : "justify-start"}`}>
               <div
                 className={`max-w-[80%] rounded-2xl px-4 py-2 text-sm ${
-                  t.role === "user"
-                    ? "bg-black text-white"
-                    : "bg-neutral-100 text-black"
+                  t.role === "user" ? "bg-black text-white" : "bg-neutral-100 text-black"
                 }`}
               >
                 {t.text}

@@ -157,9 +157,7 @@ function CreditPage() {
           </div>
           <div className="rounded-xl border border-neutral-200 p-3">
             <div className="text-xs text-neutral-500">Estimated next</div>
-            <div className="text-lg font-semibold text-green-700">
-              {user.estimatedNextScore}
-            </div>
+            <div className="text-lg font-semibold text-green-700">{user.estimatedNextScore}</div>
           </div>
         </div>
       </Card>
